@@ -33,6 +33,12 @@ const AllocationForm = (props) => {
             }
     };
 
+    const handleBlur = (value) => {
+        if(value>{remaining}) {
+            alert(`The value can't exceed the remaining funds ${remaining}`)
+        }
+    }
+
     return (
         <div>
             <div className='row'>
@@ -65,7 +71,9 @@ const AllocationForm = (props) => {
                         id='cost'
                         value={cost}
                         style={{ marginLeft: '2rem' , size: 10}}
-                        onChange={(event) => setCost(event.target.value)}>
+                        onChange={(event) => setCost(event.target.value)}
+                        onBlur={(event) => handleBlur(event.target.value)}
+                        >
                         </input>
 
                     <button className="btn btn-primary" onClick={submitEvent} style={{ marginLeft: '2rem' }}>

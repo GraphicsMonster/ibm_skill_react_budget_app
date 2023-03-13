@@ -1,4 +1,5 @@
 import React from 'react';
+import "./App.css";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -21,6 +22,8 @@ const App = () => {
             <div className='container'>
                 <h1 className='mt-3'>Company's Budget Allocation</h1>
                     <div className='row mt-3'>
+                    <div className='budget-row'>
+
                         {/* Add Budget component here under */}   
                          <Budget />     
 
@@ -29,6 +32,9 @@ const App = () => {
 
                         {/* Add ExpenseTotal component here under */} 
                          <ExpenseTotal />
+                         
+                    </div>
+
                        
                         {/* Add ExpenseList component here under */}  
                          <ExpenseList />       
